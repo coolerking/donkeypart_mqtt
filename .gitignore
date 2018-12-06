@@ -1,0 +1,5 @@
+mosquitto/data/*.db
+mosquitto/log/*.log
+.git
+mqtt/brokers.yml
+**/*.pyc

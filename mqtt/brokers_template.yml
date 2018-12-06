@@ -1,0 +1,27 @@
+ibm:
+  template:
+    client_id: 'd:{org_id}:{type_id}:{device_id}'
+    host: '{org_id}.messaging.internetofthings.ibmcloud.com'
+    port: 1883
+    user: 'use-token-auth'
+    password: '{set token}'
+    pub_topic: 'iot-2/evt/eid/fmt/json'
+    sub_topic: 'iot-2/evt/cid/fmt/json'
+    comment: 'IBM Cloud IoT Foundation configuration template'
+  product:
+    comment: 'write with reference to ibm template stage'
+mosquitto:
+  template:
+    host: '{ip_address}'
+    port: 1883
+    pub_topic: '{donkeycar_name}/tub'
+    sub_topic: '{donkeycar_name}/pilot'
+    comment: 'mosquitto configuration template'
+  product:
+    comment: 'write with reference to mosquitto template stage'
+  test:
+    host: '127.0.0.1'
+    port: 1883
+    pub_topic: 'emperor/tub'
+    sub_topic: 'emperor/pilot'
+    comment: 'test stage for emperor'
